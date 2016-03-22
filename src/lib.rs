@@ -1,4 +1,6 @@
 #![feature(placement_in_syntax, placement_new_protocol)]
+#![feature(test)]
+#![feature(box_syntax, box_heap)]
 
 //! The arena, a fast but limited type of allocator.
 //!
@@ -25,6 +27,8 @@ use std::mem;
 
 #[cfg(test)]
 mod test;
+#[cfg(test)]
+mod bench;
 
 // Initial size in bytes.
 const INITIAL_SIZE: usize = 1024;
